@@ -69,3 +69,4 @@ This project showcases:
 ## 🛠️ Technologies Used
 - Terraform: For provisioning and managing infrastructure.
 - AWS: Cloud provider for provisioning EC2 instances.
+  
