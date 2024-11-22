@@ -21,28 +21,28 @@ Before running this Terraform project, ensure you have the following:
 
 ## 💻 How to Use
 Clone the repository and navigate to the project directory:
-   ```bash
+
    git clone https://github.com/YourUsername/DevOps-Course-2024.git
    cd DevOps-Course-2024/Terraform-Cloud-Infrastructure
 
 Initialize Terraform in the directory:
-   ```bash
+
    terraform init
 
 Validate the configuration:
-   ```bash
+
    terraform validate
 
 Plan the infrastructure changes:
-   ```bash
+
    terraform plan
 
 Apply the changes to provision resources:
-   ```bash
+
    terraform apply
 
 Confirm the output (Instance ID will be displayed):
-   ```bash
+
    Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
    Outputs:
    instance_id = "i-xxxxxxxxxxxxxxxxx"
@@ -51,7 +51,7 @@ Confirm the output (Instance ID will be displayed):
 
 ## 🧹 Clean Up
 To destroy the created resources, run:
-   ```bash
+
    terraform destroy
 
 ---
