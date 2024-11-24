@@ -3,23 +3,23 @@
 Welcome to the Zero to Hero guide on Terraform for provisioning and managing AWS Cloud Infrastructure. This repository takes you through every step, from setting up your environment to mastering advanced Terraform features.
 
 ## 📖 Table of Contents
-- Introduction
-- Prerequisites
-- Getting Started
-  - Installing Tools
-  - Setting Up AWS Credentials
-- Terraform Basics
-  - Providers, Resources, and Variables
-  - State Files and Backend
-- Project Walkthrough
-  - Step-by-Step Implementation
-- Advanced Topics
-  - Remote State Management
-  - Terraform Modules
-  - Managing Multiple Environments
-- Best Practices
-- Clean Up
-- Resources
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [Installing Tools](#installing-tools)
+  - [Setting Up AWS Credentials](#setting-up-aws-credentials)
+- [Terraform Basics](#terraform-basics)
+  - [Providers, Resources, and Variables](#providers-resources-and-variables)
+  - [State Files and Backend](#state-files-and-backend)
+- [Project Walkthrough](#project-walkthrough)
+  - [Step-by-Step Implementation](#step-by-step-implementation)
+- [Advanced Topics](#advanced-topics)
+  - [Remote State Management](#remote-state-management)
+  - [Terraform Modules](#terraform-modules)
+  - [Managing Multiple Environments](#managing-multiple-environments)
+- [Best Practices](#best-practices)
+- [Clean Up](#clean-up)
+- [Resources](#resources)
 
 ---
 
