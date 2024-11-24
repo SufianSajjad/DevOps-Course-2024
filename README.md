@@ -48,6 +48,7 @@ Install Terraform:
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install terraform
+```
 
 
 Install AWS CLI: Follow the official AWS CLI installation guide.
@@ -55,13 +56,13 @@ Verify installations:
 ```bash
 terraform -v
 aws --version
-
+```
 
 ### 2. Setting Up AWS Credentials
 Run:
 ```bash
 aws configure
-
+```
 Provide:
 - AWS Access Key
 - AWS Secret Key
@@ -76,7 +77,7 @@ Providers define the cloud service (e.g., AWS). Example:
 provider "aws" {
   region = "us-east-1"
 }
-
+```
 ### 2. Resources
 Resources define specific infrastructure components. Example:
 ```hcl
@@ -85,14 +86,14 @@ resource "aws_instance" "example" {
   ami           = "ami-0c55b159cbfafe1f0"
   instance_type = "t2.micro"
 }
-
+```
 ### 3. Variables
 Variables make configurations reusable and manageable. Example:
 ```hcl
 variable "instance_type" {
   default = "t2.micro"
 }
-
+```
 resource "aws_instance" "example" {
   ami           = "ami-0c55b159cbfafe1f0"
   instance_type = var.instance_type
@@ -105,14 +106,14 @@ Terraform keeps track of the infrastructure state. Never manually edit terraform
 ### Step 1: Initialize the Project
 ```bash
 terraform init
-
+```
 ### Step 2: Define Infrastructure
 Create a main.tf file with the following:
 ```hcl
 provider "aws" {
   region = "us-east-1"
 }
-
+```
 resource "aws_instance" "my_instance" {
   ami           = "ami-0c55b159cbfafe1f0"
   instance_type = "t2.micro"
@@ -126,22 +127,22 @@ resource "aws_instance" "my_instance" {
 ```bash
 terraform validate
 terraform plan
-
+```
 ### Step 4: Apply Changes
 ```bash
 terraform apply
-
+```
 Confirm the changes, and Terraform will provision the resources.
 ### Step 5: View Outputs
 ```hcl
 output "instance_id" {
   value = aws_instance.my_instance.id
 }
-
+```
 Run:
 ```bash
 terraform output
-
+```
 
 ## 🌟 Advanced Topics
 ### 1. Remote State Management
@@ -154,7 +155,7 @@ terraform {
     region         = "us-east-1"
   }
 }
-
+```
 ### 2. Terraform Modules
 Organize reusable code:
 ```hcl
@@ -162,13 +163,13 @@ module "ec2" {
   source = "./modules/ec2"
   instance_type = "t2.micro"
 }
-
+```
 ### 3. Multiple Environments
 Use workspaces:
 ```bash
 terraform workspace new dev
 terraform workspace select dev
-
+```
 ### 4. Best Practices
 Version control state files.
 Use .tfvars for sensitive data (never commit it to Git).
@@ -178,7 +179,7 @@ Implement linting tools like tflint.
 To destroy all resources:
 ```bash
 terraform destroy
-
+```
 
 ## 📚 Resources
 Terraform Documentation
